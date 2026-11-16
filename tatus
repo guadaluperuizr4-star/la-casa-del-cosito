@@ -1,0 +1,31 @@
+warning: in the working copy of 'next.config.ts', LF will be replaced by CRLF the next time Git touches it
+[1mdiff --git a/app/producto/[slug]/page.tsx b/app/producto/[slug]/page.tsx[m
+[1mindex e6d697b..ee41bf9 100644[m
+[1m--- a/app/producto/[slug]/page.tsx[m
+[1m+++ b/app/producto/[slug]/page.tsx[m
+[36m@@ -9,6 +9,8 @@[m [mexport function generateStaticParams() {[m
+   return [{ slug: "difusor-efecto-llama" }];[m
+ }[m
+ [m
+[32m+[m[32mexport const dynamicParams = false;[m
+[32m+[m
+ export default async function ProductPage({ params }: ProductPageProps) {[m
+   const { slug } = await params;[m
+ [m
+[1mdiff --git a/next.config.ts b/next.config.ts[m
+[1mindex a0cf0c7..7a006d5 100644[m
+[1m--- a/next.config.ts[m
+[1m+++ b/next.config.ts[m
+[36m@@ -2,8 +2,10 @@[m [mimport type { NextConfig } from "next";[m
+ [m
+ const nextConfig: NextConfig = {[m
+   /* config options here */[m
+[31m-  cacheComponents: true,[m
+[31m-  partialPrefetching: true,[m
+[32m+[m[32m  output: "export",[m
+[32m+[m[32m  images: {[m
+[32m+[m[32m    unoptimized: true,[m
+[32m+[m[32m  },[m
+   turbopack: {[m
+     rules: {[m
+       "*.css": {[m
