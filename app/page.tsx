@@ -1,4 +1,5 @@
 import BrandLogo from "./components/brand-logo";
+import LegalLinks from "./components/legal-links";
 
 const categories = [
   {
@@ -602,6 +603,7 @@ export default function Home() {
             </nav>
           </div>
         </div>
+        <LegalLinks />
         <div className="mx-auto mt-8 flex max-w-7xl flex-col gap-2 border-t border-[#49463f]/10 pt-5 text-xs text-[#49463f]/50 sm:flex-row sm:justify-between">
           <span>© 2026 La Casa del Cosito</span>
           <span>Hecho con cariño en México</span>

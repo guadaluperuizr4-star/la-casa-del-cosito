@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import BrandLogo from "../../components/brand-logo";
+import LegalLinks from "../../components/legal-links";
 
 const gallery = [
   { name: "Vista principal", tone: "from-[#ead8c5] via-[#dfc1a7] to-[#c99c7e]" },
@@ -357,6 +358,7 @@ export default function ProductDetail() {
             Contacto
           </Link>
         </div>
+        <LegalLinks />
       </footer>
     </div>
   );

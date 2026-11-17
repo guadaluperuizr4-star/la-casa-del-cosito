@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import BrandLogo from "../components/brand-logo";
+import LegalLinks from "../components/legal-links";
 
 const categories = [
   { name: "Hogar Bonito", icon: "🏡" },
@@ -586,6 +587,7 @@ export default function Tienda() {
             Contacto
           </Link>
         </div>
+        <LegalLinks />
       </footer>
     </div>
   );
